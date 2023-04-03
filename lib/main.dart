@@ -11,7 +11,7 @@ import 'package:google_fonts/google_fonts.dart';
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [SystemUiOverlay.top]);
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
   runApp(const MyApp());
 }

@@ -1,0 +1,11 @@
+framework module manage_calendar_events {
+  umbrella header "manage_calendar_events-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module manage_calendar_events.Swift {
+  header "manage_calendar_events-Swift.h"
+  requires objc
+}

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Volumes/Storage/git/dissertation/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-lo/values-lo.xml",
+            "outputFile": "/Volumes/Storage/git/Dissertation-App/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-lo/values-lo.xml",
             "map": [
                 {
                     "source": "/Users/cockers/.gradle/caches/transforms-3/6c904063f107eac0f8c32ba78a6525b4/transformed/browser-1.4.0/res/values-lo/values-lo.xml",

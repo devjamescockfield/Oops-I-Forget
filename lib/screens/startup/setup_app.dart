@@ -147,29 +147,7 @@ class _StartUpPageState extends State<StartUpPage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        IconButton(
-                            iconSize: 50,
-                            onPressed: () {
-                              print("google");
-                            },
-                            icon: const FaIcon(FontAwesomeIcons.google)
-                        ),
-                        const SizedBox(width: 20),
-                        IconButton(
-                            iconSize: 50,
-                            onPressed: () {
-                              print("apple");
-                            },
-                            icon: const FaIcon(FontAwesomeIcons.apple)
-                        ),
-                        const SizedBox(width: 20),
-                        IconButton(
-                          iconSize: 50,
-                            onPressed: () {
-                              print("microsoft");
-                            },
-                            icon: const FaIcon(FontAwesomeIcons.microsoft)
-                        )
+                        
                       ],
                     )
                   ],

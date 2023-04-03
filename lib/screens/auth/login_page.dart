@@ -194,6 +194,7 @@ class _LoginPageState extends State<LoginPage> {
         await storage.write(key: "KEY_PASSWORD", value: passwordController.text.trim());
       }
 
+      if(!mounted) return;
       navigate();
     } on FirebaseAuthException catch (e) {
       print(e);

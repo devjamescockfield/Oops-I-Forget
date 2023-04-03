@@ -22,6 +22,7 @@ class _SettingsPageState extends State<SettingsPage> {
       body: Center(child:
       Column(
         children: [
+          const SizedBox(height: 75,),
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: ElevatedButton.icon(

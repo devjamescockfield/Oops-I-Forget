@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Volumes/Storage/git/dissertation/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-es/values-es.xml",
+            "outputFile": "/Volumes/Storage/git/Dissertation-App/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-es/values-es.xml",
             "map": [
                 {
                     "source": "/Users/cockers/.gradle/caches/transforms-3/681597510be667ee9b590df9cbd566f6/transformed/biometric-1.1.0/res/values-es/values-es.xml",

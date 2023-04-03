@@ -187,6 +187,8 @@ com/google/android/gms/internal/common/zzs.class
 com/google/android/gms/internal/common/zzx.class
 com/google/android/gms/internal/common/zzy.class
 com/google/android/gms/internal/common/zzz.class
+com/google/android/play/core/integrity/model/IntegrityErrorCode.class
+com/google/android/recaptcha/internal/zzbf.class
 com/google/common/annotations/Beta.class
 com/google/common/annotations/GwtCompatible.class
 com/google/common/annotations/GwtIncompatible.class
@@ -538,6 +540,7 @@ kotlinx/coroutines/flow/LintKt.class
 kotlinx/coroutines/internal/LimitedDispatcher.class
 kotlinx/coroutines/scheduling/ExperimentalCoroutineDispatcher.class
 kotlinx/coroutines/sync/Mutex$DefaultImpls.class
+kotlinx/coroutines/tasks/TasksKt$asDeferredImpl$3.class
 kotlinx/coroutines/test/TestCoroutineContext$Dispatcher.class
 kotlinx/coroutines/test/TestCoroutineContext.class
 kotlinx/coroutines/test/TestCoroutineContextKt.class

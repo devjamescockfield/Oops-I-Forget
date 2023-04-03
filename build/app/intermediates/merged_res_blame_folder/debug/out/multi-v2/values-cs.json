@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Volumes/Storage/git/dissertation/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-cs/values-cs.xml",
+            "outputFile": "/Volumes/Storage/git/Dissertation-App/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-cs/values-cs.xml",
             "map": [
                 {
                     "source": "/Users/cockers/.gradle/caches/transforms-3/7fb665a7d74d91a2f24c0881a8b053c1/transformed/appcompat-1.2.0/res/values-cs/values-cs.xml",
