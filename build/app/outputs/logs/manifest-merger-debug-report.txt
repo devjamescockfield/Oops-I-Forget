@@ -40,11 +40,11 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/cock
 	android:name
 		INJECTED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml
 manifest
-ADDED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml:1:1-37:12
-INJECTED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml:1:1-37:12
-INJECTED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml:1:1-37:12
-INJECTED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml:1:1-37:12
-MERGED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml:1:1-37:12
+ADDED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml:1:1-39:12
+INJECTED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml:1:1-39:12
+INJECTED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml:1:1-39:12
+INJECTED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml:1:1-39:12
+MERGED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml:1:1-39:12
 MERGED from [:shared_preferences_android] /Volumes/Storage/git/Dissertation-App/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:firebase_auth] /Volumes/Storage/git/Dissertation-App/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:cloud_firestore] /Volumes/Storage/git/Dissertation-App/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
@@ -110,14 +110,14 @@ INJECTED from /Volumes/Storage/git/Dissertation-App/android/app/src/debug/Androi
 		INJECTED from /Volumes/Storage/git/Dissertation-App/android/app/src/debug/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml
-		ADDED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml:1:1-37:12
+		ADDED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml:1:1-39:12
 		INJECTED from /Volumes/Storage/git/Dissertation-App/android/app/src/debug/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml:2:5-51
 		ADDED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml:2:5-51
 	android:versionCode
 		INJECTED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml
-		ADDED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml:1:1-37:12
+		ADDED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml:1:1-39:12
 		INJECTED from /Volumes/Storage/git/Dissertation-App/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml:1:11-69
@@ -129,6 +129,14 @@ MERGED from [androidx.biometric:biometric:1.1.0] /Users/cockers/.gradle/caches/t
 MERGED from [androidx.biometric:biometric:1.1.0] /Users/cockers/.gradle/caches/transforms-3/681597510be667ee9b590df9cbd566f6/transformed/biometric-1.1.0/AndroidManifest.xml:24:5-72
 	android:name
 		ADDED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml:36:22-69
+uses-permission#android.permission.READ_CALENDAR
+ADDED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml:37:5-72
+	android:name
+		ADDED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml:37:22-69
+uses-permission#android.permission.WRITE_CALENDAR
+ADDED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml:38:5-73
+	android:name
+		ADDED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml:38:22-70
 uses-sdk
 INJECTED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Volumes/Storage/git/Dissertation-App/android/app/src/main/AndroidManifest.xml

@@ -1,9 +1,10 @@
+import 'package:dissertation/services/Utils.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:dissertation/services/StartupService.dart';
+import 'package:manage_calendar_events/manage_calendar_events.dart';
 
 class StartUpPage extends StatefulWidget {
   const StartUpPage({Key? key}) : super(key: key);
@@ -19,6 +20,7 @@ class _StartUpPageState extends State<StartUpPage> {
   final _localAuth = LocalAuthentication();
   bool bioEnabled = false;
   bool useApp = false;
+  final CalendarPlugin _calendar = CalendarPlugin();
 
   tapped(int step){
     setState(() => _currentStep = step);
@@ -147,7 +149,13 @@ class _StartUpPageState extends State<StartUpPage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        
+                        ElevatedButton(onPressed: () {
+                          _calendar.hasPermissions().then((value) {
+                            if(!value!) {
+                              _calendar.requestPermissions();
+                            }
+                          });
+                        }, child: const Text('Check if this app has permission\nto use the calendar'))
                       ],
                     )
                   ],

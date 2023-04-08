@@ -6,6 +6,8 @@ import 'package:dissertation/screens/create/create_module.dart';
 import 'package:dissertation/screens/create/create_other.dart';
 import 'package:dissertation/screens/create/create_tutorial.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:manage_calendar_events/manage_calendar_events.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -15,6 +17,16 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  final _storage = const FlutterSecureStorage();
+  final _calendar = CalendarPlugin();
+
+  checkStorage() async {
+    if(await _storage.containsKey(key: "KEY_USE_APP_AS_CALENDAR")) {
+
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

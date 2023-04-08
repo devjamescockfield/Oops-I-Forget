@@ -33,7 +33,7 @@
     },
     {
       "name": "cloud_firestore",
-      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/cloud_firestore-4.5.0",
+      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/cloud_firestore-4.5.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -45,7 +45,7 @@
     },
     {
       "name": "cloud_firestore_web",
-      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/cloud_firestore_web-3.4.0",
+      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/cloud_firestore_web-3.4.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -93,7 +93,7 @@
     },
     {
       "name": "firebase_auth",
-      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/firebase_auth-4.4.0",
+      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/firebase_auth-4.4.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -105,7 +105,7 @@
     },
     {
       "name": "firebase_auth_web",
-      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/firebase_auth_web-5.3.0",
+      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/firebase_auth_web-5.3.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -309,9 +309,9 @@
     },
     {
       "name": "path_provider_foundation",
-      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/path_provider_foundation-2.2.1",
+      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/path_provider_foundation-2.2.2",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "2.18"
     },
     {
       "name": "path_provider_linux",
@@ -363,7 +363,7 @@
     },
     {
       "name": "shared_preferences_foundation",
-      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.2.0",
+      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.2.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -423,19 +423,19 @@
     },
     {
       "name": "syncfusion_flutter_calendar",
-      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/syncfusion_flutter_calendar-21.1.38",
+      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/syncfusion_flutter_calendar-21.1.39",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "syncfusion_flutter_core",
-      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/syncfusion_flutter_core-21.1.38",
+      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/syncfusion_flutter_core-21.1.39",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "syncfusion_flutter_datepicker",
-      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/syncfusion_flutter_datepicker-21.1.38",
+      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/syncfusion_flutter_datepicker-21.1.39",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -488,7 +488,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-04-08T16:09:07.742365Z",
+  "generated": "2023-04-13T19:26:10.223982Z",
   "generator": "pub",
-  "generatorVersion": "2.19.5"
+  "generatorVersion": "2.19.6"
 }
