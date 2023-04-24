@@ -62,6 +62,12 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "device_calendar",
+      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/device_calendar-4.3.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "easy_splash_screen",
       "rootUri": "file:///C:/Users/cocke/AppData/Local/Pub/Cache/hosted/pub.dev/easy_splash_screen-1.0.4",
       "packageUri": "lib/",
@@ -138,6 +144,12 @@
       "rootUri": "file:///C:/Users/cocke/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-2.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
+    },
+    {
+      "name": "flutter_native_timezone",
+      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/flutter_native_timezone-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "flutter_plugin_android_lifecycle",
@@ -351,7 +363,11 @@
     },
     {
       "name": "shared_preferences_android",
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/cocke/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_android-2.1.0",
+=======
+      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/shared_preferences_android-2.1.1",
+>>>>>>> Stashed changes
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -396,6 +412,12 @@
       "rootUri": "file:///C:/Users/cocke/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.9.1",
       "packageUri": "lib/",
       "languageVersion": "2.14"
+    },
+    {
+      "name": "sprintf",
+      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/sprintf-7.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "stack_trace",
@@ -482,7 +504,11 @@
       "languageVersion": "2.18"
     }
   ],
+<<<<<<< Updated upstream
   "generated": "2023-04-14T14:35:41.451588Z",
+=======
+  "generated": "2023-04-13T21:55:23.984670Z",
+>>>>>>> Stashed changes
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }

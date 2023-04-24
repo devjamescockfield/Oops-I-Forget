@@ -81,6 +81,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.2"
+  device_calendar:
+    dependency: "direct main"
+    description:
+      name: device_calendar
+      sha256: "5a1ce7887b4ffbaf3743078c8314dede5e694cddd69bab43f35ce815c5d82a7d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.3.1"
   easy_splash_screen:
     dependency: "direct main"
     description:
@@ -182,6 +190,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.1"
+  flutter_native_timezone:
+    dependency: transitive
+    description:
+      name: flutter_native_timezone
+      sha256: ed7bfb982f036243de1c068e269182a877100c994f05143c8b26a325e28c1b02
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0"
   flutter_plugin_android_lifecycle:
     dependency: transitive
     description:
@@ -460,10 +476,10 @@ packages:
     dependency: transitive
     description:
       name: shared_preferences_android
-      sha256: "8304d8a1f7d21a429f91dee552792249362b68a331ac5c3c1caf370f658873f6"
+      sha256: "1bc5d734b109c327b922b0891b41fc51483ccbd53c0d19952b7e230349a5d90b"
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.0"
+    version: "2.1.1"
   shared_preferences_foundation:
     dependency: transitive
     description:
@@ -517,6 +533,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.1"
+  sprintf:
+    dependency: transitive
+    description:
+      name: sprintf
+      sha256: "1fc9ffe69d4df602376b52949af107d8f5703b77cda567c4d7d86a0693120f23"
+      url: "https://pub.dev"
+    source: hosted
+    version: "7.0.0"
   stack_trace:
     dependency: transitive
     description:
