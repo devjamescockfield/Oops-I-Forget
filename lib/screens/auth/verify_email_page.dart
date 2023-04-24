@@ -63,11 +63,11 @@ class _VerifyEmailPageState extends State<VerifyEmailPage> {
     }
   }
 
+
   @override
   Widget build(BuildContext context) => isEmailVerified ? const StartupService() : Scaffold(
       backgroundColor: const Color.fromRGBO(10, 46, 54, 1),
-      body:
-      Center(
+      body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,

@@ -18,25 +18,12 @@ class _CreateModuleState extends State<CreateModule> {
   final formKey = GlobalKey<FormState>();
   final nameController = TextEditingController();
   final descriptionController = TextEditingController();
-  final startDateController = TextEditingController();
-  final endDateController = TextEditingController();
-  late int startUnix = DateTime.now().microsecondsSinceEpoch;
-  late String startDate = DateTime.now().toString();
-  late int endUnix = DateTime.now().microsecondsSinceEpoch;
-  late String endDate = DateTime.now().toString();
-  late bool allDay = false;
-  late bool repeatDaily = false;
-  late bool repeatWeekly = false;
-  late bool repeatMonthly = false;
-  late bool repeatYearly = false;
 
   @override
   void initState() {
     super.initState();
     nameController.text = "";
     descriptionController.text = "";
-    startDateController.text = "";
-    endDateController.text = "";
   }
 
   @override
@@ -44,8 +31,6 @@ class _CreateModuleState extends State<CreateModule> {
     super.dispose();
     nameController.dispose();
     descriptionController.dispose();
-    startDateController.dispose();
-    endDateController.dispose();
   }
 
   @override
@@ -96,92 +81,6 @@ class _CreateModuleState extends State<CreateModule> {
                         ),
                       ),
                       const SizedBox(height: 20),
-                      const Text("Select a start date", style: TextStyle(color: Colors.white)),
-                      const SizedBox(height: 5),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: 100,
-                            child: TextFormField(
-                              style: const TextStyle(color: Colors.white),
-                              controller: startDateController,
-                              decoration: const InputDecoration(
-                                  labelText: "Start Date",
-                                  labelStyle: TextStyle(color: Colors.white)
-                              ),
-                              readOnly: true,
-                              validator: (value) => value == null ? "Please Select a Start Date!" : null,
-                              onTap: () async {
-                                DateTime? pickDate = await showDatePicker(
-                                    context: context,
-                                    initialDate: DateTime.now(),
-                                    firstDate: DateTime(2022),
-                                    lastDate: DateTime.now().add(const Duration(days: 365*4))
-                                );
-
-                                if (pickDate != null) {
-
-                                  String formattedDate = DateFormat('yyyy-MM-dd').format(pickDate);
-
-                                  var timestamp = pickDate.microsecondsSinceEpoch;
-
-                                  setState(() {
-                                    startUnix = timestamp;
-                                    startDateController.text = formattedDate;
-                                  });
-                                } else {
-                                  print("Date is not selected");
-                                }
-                              },
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 20),
-                      const Text("Select an end date", style: TextStyle(color: Colors.white)),
-                      const SizedBox(height: 5),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: 100,
-                            child: TextFormField(
-                              style: const TextStyle(color: Colors.white),
-                              controller: endDateController,
-                              decoration: const InputDecoration(
-                                  labelText: "End Date",
-                                  labelStyle: TextStyle(color: Colors.white)
-                              ),
-                              readOnly: true,
-                              validator: (value) => value == null ? "Please Select a End Date!" : null,
-                              onTap: () async {
-                                DateTime? pickDate = await showDatePicker(
-                                    context: context,
-                                    initialDate: DateTime.now(),
-                                    firstDate: DateTime(2022),
-                                    lastDate: DateTime.now().add(const Duration(days: 365*4))
-                                );
-
-                                if (pickDate != null) {
-
-                                  var timestamp = pickDate.microsecondsSinceEpoch;
-
-                                  String formattedDate = DateFormat('yyyy-MM-dd').format(pickDate);
-
-                                  setState(() {
-                                    endUnix = timestamp;
-                                    endDateController.text = formattedDate;
-                                  });
-                                } else {
-                                  print("Date is not selected");
-                                }
-                              },
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 20),
                       ElevatedButton(onPressed: addModule, child: const Text("Add Module")),
                       const SizedBox(height: 10),
                       ElevatedButton(onPressed: back, child: const Text("Back"))
@@ -203,7 +102,7 @@ class _CreateModuleState extends State<CreateModule> {
     var user = FirebaseAuth.instance.currentUser!;
 
     try {
-      FirebaseFirestore.instance.collection("modules").add(Module(user.uid.toString(), nameController.text.trim(), descriptionController.text.trim(), DateTime.fromMicrosecondsSinceEpoch(startUnix).toString(), DateTime.fromMicrosecondsSinceEpoch(endUnix).toString()).toJson());
+      FirebaseFirestore.instance.collection("modules").add(Module(user.uid.toString(), nameController.text.trim(), descriptionController.text.trim()).toJson());
 
       Utils.showSnackBar("Created Module ${nameController.text.trim()}", false);
 
@@ -218,8 +117,6 @@ class _CreateModuleState extends State<CreateModule> {
                       setState(() {
                         nameController.text = "";
                         descriptionController.text = "";
-                        startDateController.text = "";
-                        endDateController.text = "";
                       });
                       Navigator.of(context).pop();
                     },

@@ -72,26 +72,43 @@ class _LoginPageState extends State<LoginPage> {
                     child: Form(
                       key: formKey,
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
+                          const Text("Email", style: TextStyle(color: Colors.white, fontSize: 25)),
+                          const SizedBox(height: 10),
                           TextFormField(
                             controller: emailController,
-                            cursorColor: Colors.white,
+                            cursorColor: Colors.black,
                             textInputAction: TextInputAction.next,
-                            decoration: const InputDecoration(labelText: "Email"),
+                            decoration: InputDecoration(
+                              filled: true,
+                              fillColor: Colors.white,
+                              border: OutlineInputBorder(
+                                borderSide: BorderSide.none,
+                                borderRadius: BorderRadius.circular(50.0)
+                              )
+                            ),
                             autovalidateMode: AutovalidateMode.onUserInteraction,
-                            style: const TextStyle(color: Colors.white),
+                            style: const TextStyle(color: Colors.black),
                             validator: (email) =>
                             email != null && !EmailValidator.validate(email)
                                 ? 'Enter a valid email'
                                 : null,
                           ),
-                          const SizedBox(height: 4),
+                          const SizedBox(height: 20),
+                          const Text("Password", style: TextStyle(color: Colors.white, fontSize: 25)),
+                          const SizedBox(height: 10),
                           TextFormField(
                             controller: passwordController,
-                            cursorColor: Colors.white,
+                            cursorColor: Colors.black,
                             textInputAction: TextInputAction.next,
-                            decoration: const InputDecoration(labelText: "Password"),
+                            decoration: InputDecoration(
+                              filled: true,
+                              fillColor: Colors.white,
+                              border: OutlineInputBorder(
+                                  borderSide: BorderSide.none,
+                                  borderRadius: BorderRadius.circular(50.0)
+                              )
+                            ),
                             style: const TextStyle(color: Colors.white),
                             obscureText: true,
                             autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -103,27 +120,19 @@ class _LoginPageState extends State<LoginPage> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Checkbox(
-                                  value: _savePassword,
-                                  onChanged: (val) {
-                                    setState(() {
-                                      _savePassword = val!;
-                                    });
-                                  }
+                              Transform.scale(
+                                scale: 1.5,
+                                child: Checkbox(
+                                    value: _savePassword,
+                                    onChanged: (val) {
+                                      setState(() {
+                                        _savePassword = val!;
+                                      });
+                                    }
+                                ),
                               ),
-                              const Text("Remember Me", style: TextStyle(color: Colors.white),)
+                              const Text("Remember Me", style: TextStyle(color: Colors.white, fontSize: 20))
                             ],
-                          ),
-                          const SizedBox(height: 20),
-                          ElevatedButton.icon(
-                            style: ElevatedButton.styleFrom(
-                                minimumSize: const Size.fromHeight(50)),
-                            icon: const Icon(Icons.lock_open, size: 32),
-                            label: const Text(
-                              'Sign In',
-                              style: TextStyle(fontSize: 24),
-                            ),
-                            onPressed: signIn,
                           ),
                           const SizedBox(height: 10),
                           GestureDetector(
@@ -155,7 +164,19 @@ class _LoginPageState extends State<LoginPage> {
                                     )
                                   ]
                               )
-                          )
+                          ),
+                          const SizedBox(height: 20),
+                          ElevatedButton.icon(
+                            style: ButtonStyle(
+
+                            ),
+                            icon: const Icon(Icons.lock_open, size: 32),
+                            label: const Text(
+                              'Sign In',
+                              style: TextStyle(fontSize: 24),
+                            ),
+                            onPressed: signIn,
+                          ),
                         ],
                       ),
                     )

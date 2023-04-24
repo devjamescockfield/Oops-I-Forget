@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dissertation/model/Task.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:dissertation/model/Activity.dart';
 import 'package:dissertation/services/utils.dart';
 import 'package:dissertation/screens/layout.dart';
 
@@ -358,7 +358,7 @@ class _CreateOtherState extends State<CreateOther> {
     var user = FirebaseAuth.instance.currentUser!;
 
     try {
-      FirebaseFirestore.instance.collection("other").add(Activity(user.uid.toString(), nameController.text.trim(), descriptionController.text.trim(), startDate, endDate, repeatDaily, repeatWeekly, repeatMonthly, repeatYearly, allDay).toJson());
+      FirebaseFirestore.instance.collection("tasks").add(Task(user.uid.toString(), "", "other",nameController.text.trim(), descriptionController.text.trim(), startDate, endDate, repeatDaily, repeatWeekly, repeatMonthly, repeatYearly, allDay).toJson());
 
       Utils.showSnackBar("Created entry ${nameController.text.trim()}", false);
 

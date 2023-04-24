@@ -5,12 +5,10 @@ class Entry {
   late final String uid;
   late final String name; // name of task
   late final String description; // description of task
-  late final String startDate; // start date time of task
-  late final String endDate; // end date time of task
 
   // constructor
 
-  Entry(this.uid, this.name, this.description, this.startDate, this.endDate);
+  Entry(this.uid, this.name, this.description);
 
   // getters
 
@@ -24,14 +22,6 @@ class Entry {
 
   String getDescription() {
     return description;
-  }
-
-  String getStartDate() {
-    return startDate;
-  }
-
-  String getEndDate() {
-    return endDate;
   }
 
   // setters
@@ -48,28 +38,18 @@ class Entry {
     this.description = description;
   }
 
-  void setStartDate(String startDate) {
-    this.startDate = startDate;
-  }
-
-  void setEndDate(String endDate) {
-    this.endDate = endDate;
-  }
-
   // toJson
 
   toJson() {
     return {
       "uid": uid,
       "name": name,
-      "description": description,
-      "startDate": startDate,
-      "endDate": endDate
+      "description": description
     };
   }
 
   factory Entry.fromJson(dynamic json) {
-    return Entry(json["uid"], json["name"], json["description"], json["startDate"], json["endDate"]);
+    return Entry(json["uid"], json["name"], json["description"]);
   }
 
 }

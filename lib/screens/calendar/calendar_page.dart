@@ -1,11 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:dissertation/model/Other.dart';
 import 'package:dissertation/services/utils.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 import 'package:dissertation/services/TaskDataSource.dart';
-import 'package:dissertation/model/Activity.dart';
 import 'package:dissertation/model/Task.dart';
 
 class CalendarPage extends StatefulWidget {
@@ -22,35 +20,6 @@ class _CalendarPageState extends State<CalendarPage> {
 
   Future<List> getTasks() async {
     try {
-      // get activities
-      CollectionReference cra = FirebaseFirestore.instance.collection("activities");
-      QuerySnapshot qsa = await cra.get();
-
-      List activities = qsa.docs.map(
-              (doc) {
-
-            Activity a = Activity.fromJson(doc.data());
-
-            if(a.uid == FirebaseAuth.instance.currentUser?.uid) {
-              return Activity.fromMap(doc.data() as Map<String, dynamic>);
-            }
-          }
-      ).toList();
-
-      // get other entries
-      CollectionReference cro = FirebaseFirestore.instance.collection("other");
-      QuerySnapshot qso = await cro.get();
-
-      List other = qso.docs.map(
-              (doc) {
-            Other o = Other.fromJson(doc.data());
-
-            if(o.uid == FirebaseAuth.instance.currentUser?.uid) {
-              return Other.fromMap(doc.data() as Map<String, dynamic>);
-            }
-          }
-      ).toList();
-
       // get tasks
       CollectionReference crt = FirebaseFirestore.instance.collection("tasks");
       QuerySnapshot qst = await crt.get();
@@ -67,8 +36,6 @@ class _CalendarPageState extends State<CalendarPage> {
 
       _tasks = [];
       _tasks.addAll(tasks);
-      _tasks.addAll(activities);
-      _tasks.addAll(other);
 
       return tasks;
 

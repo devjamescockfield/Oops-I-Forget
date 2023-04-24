@@ -4,13 +4,15 @@ class Task extends Entry {
 
   final String moduleName;
   final String taskType;
+  final String startDate; // start date time of task
+  final String endDate; // end date time of task
   final bool daily;
   final bool weekly;
   final bool monthly;
   final bool yearly;
   final bool allDay;
 
-  Task(super.uid, this.moduleName, this.taskType, super.name, super.description, super.startDate, super.endDate, this.daily, this.weekly, this.monthly, this.yearly, this.allDay);
+  Task(super.uid, this.moduleName, this.taskType, super.name, super.description, this.startDate, this.endDate, this.daily, this.weekly, this.monthly, this.yearly, this.allDay);
 
   Map<String, dynamic> toMap() {
     return {

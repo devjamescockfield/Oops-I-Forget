@@ -385,8 +385,21 @@ class _CreateClassState extends State<CreateClass> {
     var user = FirebaseAuth.instance.currentUser!;
 
     try {
-      FirebaseFirestore.instance.collection("tasks").add(Task(user.uid, _selectedModule.trim(), "Class", nameController.text.trim(), descriptionController.text.trim(), startDate, endDate, repeatDaily, repeatWeekly, repeatMonthly, repeatYearly, allDay).toJson());
+      FirebaseFirestore.instance.collection("tasks").add(Task(
+          user.uid, _selectedModule.trim(),
+          "Class", nameController.text.trim(),
+          descriptionController.text.trim(),
+          startDate,
+          endDate,
+          repeatDaily,
+          repeatWeekly,
+          repeatMonthly,
+          repeatYearly,
+          allDay
+      ).toJson());
+
       Utils.showSnackBar("Created class ${nameController.text.trim()}", false);
+
       showDialog(
           context: context,
           builder: (BuildContext context) {
