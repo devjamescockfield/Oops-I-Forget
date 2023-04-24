@@ -7,9 +7,14 @@ import 'package:dissertation/screens/create/create_other.dart';
 import 'package:dissertation/screens/create/create_tutorial.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+<<<<<<< Updated upstream
+=======
+import 'package:device_calendar/device_calendar.dart';
+>>>>>>> Stashed changes
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -18,11 +23,20 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   final _storage = const FlutterSecureStorage();
+<<<<<<< Updated upstream
 
   checkStorage() async {
     if(await _storage.containsKey(key: "KEY_USE_APP_AS_CALENDAR")) {
+=======
+  final _deviceCalendarPlugin = DeviceCalendarPlugin();
+  late List<Calendar> _calendars = [];
+  late Calendar _selectedCalendar;
+>>>>>>> Stashed changes
 
-    }
+  @override
+  void initState() {
+    super.initState();
+    _retrieveCalendars();
   }
 
   @override
@@ -36,6 +50,7 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  calendarSelector(),
                   ElevatedButton(
                       onPressed: () => {
                         Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const CreateModule()))
@@ -84,5 +99,61 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
     );
+  }
+
+  Widget calendarSelector() {
+    return ConstrainedBox(
+      constraints: const BoxConstraints(maxHeight: 150.0),
+      child: ListView.builder(
+        itemCount: _calendars.length ?? 0,
+        itemBuilder: (BuildContext context, int index) {
+          return GestureDetector(
+            onTap: () {
+              setState(() {
+                _selectedCalendar = _calendars[index];
+              });
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    flex: 1,
+                    child: Text(
+                      _calendars[index].name!,
+                      style: const TextStyle(fontSize: 25.0),
+                    ),
+                  ),
+                  Icon(_calendars[index].isReadOnly!
+                      ? Icons.lock
+                      : Icons.lock_open, color: Colors.white,)
+                ],
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
+
+  void _retrieveCalendars() async {
+    try {
+      var permissionsGranted = await _deviceCalendarPlugin.hasPermissions();
+      if(permissionsGranted.isSuccess && permissionsGranted.data != null) {
+        print(1);
+        permissionsGranted = await _deviceCalendarPlugin.requestPermissions();
+        if (!permissionsGranted.isSuccess || permissionsGranted.data != null) {
+          print(2);
+          return;
+        }
+      }
+
+      final calendarsResult = await _deviceCalendarPlugin.retrieveCalendars();
+      setState(() {
+        _calendars = calendarsResult.data as List<Calendar>;
+      });
+    } catch(e) {
+      print(e);
+    }
   }
 }
