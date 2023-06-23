@@ -63,7 +63,7 @@
     },
     {
       "name": "device_calendar",
-      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/device_calendar-4.3.1",
+      "rootUri": "file:///C:/Users/cocke/AppData/Local/Pub/Cache/hosted/pub.dev/device_calendar-4.3.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -135,7 +135,7 @@
     },
     {
       "name": "flutter",
-      "rootUri": "file:///C:/tools/flutter/packages/flutter",
+      "rootUri": "file:///C:/src/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -147,7 +147,7 @@
     },
     {
       "name": "flutter_native_timezone",
-      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/flutter_native_timezone-2.0.0",
+      "rootUri": "file:///C:/Users/cocke/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_native_timezone-2.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -195,13 +195,13 @@
     },
     {
       "name": "flutter_test",
-      "rootUri": "file:///C:/tools/flutter/packages/flutter_test",
+      "rootUri": "file:///C:/src/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "flutter_web_plugins",
-      "rootUri": "file:///C:/tools/flutter/packages/flutter_web_plugins",
+      "rootUri": "file:///C:/src/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -363,11 +363,7 @@
     },
     {
       "name": "shared_preferences_android",
-<<<<<<< Updated upstream
-      "rootUri": "file:///C:/Users/cocke/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_android-2.1.0",
-=======
-      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/shared_preferences_android-2.1.1",
->>>>>>> Stashed changes
+      "rootUri": "file:///C:/Users/cocke/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_android-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -403,7 +399,7 @@
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///C:/tools/flutter/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///C:/src/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -415,7 +411,7 @@
     },
     {
       "name": "sprintf",
-      "rootUri": "file:///Users/cockers/.pub-cache/hosted/pub.dev/sprintf-7.0.0",
+      "rootUri": "file:///C:/Users/cocke/AppData/Local/Pub/Cache/hosted/pub.dev/sprintf-7.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -504,11 +500,7 @@
       "languageVersion": "2.18"
     }
   ],
-<<<<<<< Updated upstream
-  "generated": "2023-04-14T14:35:41.451588Z",
-=======
-  "generated": "2023-04-13T21:55:23.984670Z",
->>>>>>> Stashed changes
+  "generated": "2023-04-27T15:41:04.425865Z",
   "generator": "pub",
-  "generatorVersion": "2.19.6"
+  "generatorVersion": "2.19.4"
 }
